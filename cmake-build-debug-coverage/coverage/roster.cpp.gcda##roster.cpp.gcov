@@ -1,0 +1,630 @@
+        -:    0:Source:/home/rob/CLionProjects/StudentRoster/roster.cpp
+        -:    0:Graph:/home/rob/CLionProjects/StudentRoster/cmake-build-debug-coverage/CMakeFiles/StudentRoster.dir/roster.cpp.gcno
+        -:    0:Data:/home/rob/CLionProjects/StudentRoster/cmake-build-debug-coverage/CMakeFiles/StudentRoster.dir/roster.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <iostream>
+        -:    3:#include "roster.h"
+        -:    4:#include <string>
+        -:    5:#include "student.h"
+        -:    6:#include "degree.h"
+        -:    7:using namespace std;
+        -:    8:
+        6:    9:roster::roster(){};
+        1:    9-block  0
+        6:    9-block  1
+        5:    9-block  2
+        5:    9-block  3
+        1:    9-block  4
+    $$$$$:    9-block  5
+    $$$$$:    9-block  6
+    $$$$$:    9-block  7
+        -:   10:
+        -:   11:student myStudent;
+        -:   12:student *classRosterArray[5];
+        -:   13:
+        1:   14:student roster::greatStudents()
+        -:   15:{
+        -:   16:
+        1:   17:    cout << "|--------------------------------------------------------------------------------------------------|"   << endl ;
+        1:   17-block  0
+        1:   17-block  1
+        1:   18:    cout << "|Scripting and Programming - Applications – C867                                                   |"  << endl;
+        1:   18-block  0
+        1:   18-block  1
+        1:   19:    cout << "|Robert Bradbury  rbradb5@my.wgu.edu " << " C++ Course  Student ID 001467937                             |"  << endl ;
+        1:   19-block  0
+        1:   19-block  1
+        1:   19-block  2
+        1:   20:    cout << "|--------------------------------------------------------------------------------------------------|"  << endl ;
+        1:   20-block  0
+        1:   20-block  1
+        -:   21:    /////////////////////////////////////////////////DATA PARSING SECTION START/////////////////////////////////////////////////////
+        2:   22:    istringstream SS;                    // Input stream
+        1:   22-block  0
+    $$$$$:   22-block  1
+        2:   23:    string studentInfo;                 // first Holds line of text
+        1:   23-block  0
+    $$$$$:   23-block  1
+        2:   24:    string studentID;                  // ID name
+    $$$$$:   24-block  0
+        2:   25:    string firstName;                 // First name
+    $$$$$:   25-block  0
+        2:   26:    string lastName;                 // Last name
+    $$$$$:   26-block  0
+        2:   27:    string emailAddress;            // email
+    $$$$$:   27-block  0
+        2:   28:    string string_Age;            // Age
+    $$$$$:   28-block  0
+        2:   29:    string string_firstClass;    // firstClass
+    $$$$$:   29-block  0
+        2:   30:    string string_secondClass;   // secondClass
+    $$$$$:   30-block  0
+        2:   31:    string string_thirdClass;  // thirdClass
+    $$$$$:   31-block  0
+        2:   32:    string degree;             // degree
+        1:   32-block  0
+    $$$$$:   32-block  1
+        -:   33:
+        -:   34:    const string studentData[5] =
+        -:   35:            {"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
+        -:   36:             "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
+        -:   37:             "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE",
+        -:   38:             "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
+        -:   39:             "A5,Robert,Bradbury,rbradb5@my.wgu.edu,39,10,20,30,SOFTWARE"
+        7:   40:            };
+        1:   40-block  0
+        1:   40-block  1
+        1:   40-block  2
+        1:   40-block  3
+        1:   40-block  4
+        1:   40-block  5
+        6:   40-block  6
+        5:   40-block  7
+    $$$$$:   40-block  8
+    $$$$$:   40-block  9
+    $$$$$:   40-block 10
+    $$$$$:   40-block 11
+    $$$$$:   40-block 12
+    $$$$$:   40-block 13
+    $$$$$:   40-block 14
+    $$$$$:   40-block 15
+    $$$$$:   40-block 16
+    $$$$$:   40-block 17
+    $$$$$:   40-block 18
+    $$$$$:   40-block 19
+    $$$$$:   40-block 20
+    $$$$$:   40-block 21
+    $$$$$:   40-block 22
+        1:   41:    cout << setfill('*') << setw(150) << ""
+        1:   41-block  0
+        1:   41-block  1
+        1:   42:         << endl;///////////HEADER SECTION///////////////////////////////////////////////////////////
+        1:   42-block  0
+        1:   43:    cout << setfill(' ') << endl;
+        1:   43-block  0
+        1:   43-block  1
+        1:   44:    cout << "STUDENTID"   << left << setw(10) << "\t "<< "FIRSTNAME"   << right << setw(10) << "\t "<< "LASTNAME"   << left << setw(10) << "\t "<< "AGE"
+        1:   44-block  0
+        1:   44-block  1
+        1:   44-block  2
+        1:   44-block  3
+        1:   44-block  4
+        1:   44-block  5
+        1:   44-block  6
+        1:   44-block  7
+        1:   44-block  8
+        1:   44-block  9
+        1:   44-block 10
+        1:   44-block 11
+        1:   44-block 12
+        1:   45:    << right << setw(10) << "\t "<< "TIME_IN_CLASSES"   << left << setw(10) << "\t " << "EMAIL"   << right << setw(25) << "\t ""DEGREE" << '\t' << '\t' << endl;
+        1:   45-block  0
+        1:   45-block  1
+        1:   45-block  2
+        1:   45-block  3
+        1:   45-block  4
+        1:   45-block  5
+        1:   45-block  6
+        1:   45-block  7
+        1:   45-block  8
+        1:   45-block  9
+        1:   45-block 10
+        1:   45-block 11
+        1:   45-block 12
+        1:   45-block 13
+        -:   46:
+        6:   47:    for (int r = 0; r < 5; r++) {
+        1:   47-block  0
+        6:   47-block  1
+        -:   48:
+        5:   49:        studentInfo = studentData[r];
+        5:   49-block  0
+        5:   50:        SS.clear();
+        5:   50-block  0
+       10:   51:        string token;
+        5:   51-block  0
+    $$$$$:   51-block  1
+        5:   52:        SS.str(studentInfo);
+        -:   53:
+        5:   54:        getline(SS, studentID, ',');
+        5:   54-block  0
+        5:   55:        getline(SS, firstName, ',');
+        5:   55-block  0
+        5:   56:        getline(SS, lastName, ',');
+        5:   56-block  0
+        5:   57:        getline(SS, emailAddress, ',');
+        5:   57-block  0
+        5:   58:        getline(SS, string_Age, ',');
+        5:   58-block  0
+        5:   59:        getline(SS, string_firstClass, ',');
+        5:   59-block  0
+        5:   60:        getline(SS, string_secondClass, ',');
+        5:   60-block  0
+        5:   61:        getline(SS, string_thirdClass, ',');
+        5:   61-block  0
+        5:   62:        getline(SS, degree, ',');
+        5:   62-block  0
+        -:   63:        //getline(SS,firstName, ',');
+        -:   64:        // Entire line into lineString
+        -:   65:        // Copies to SS's string buffer
+        -:   66:        //////////////////////////////////PARSING THE STRING AND EXTRACTING INTEGERS FOR AGE AND THE CLASSES TIMES////////////////
+        5:   67:        SS >> studentID;
+        5:   67-block  0
+        5:   68:        SS >> firstName;
+        5:   68-block  0
+        5:   69:        SS >> lastName;
+        5:   69-block  0
+        5:   70:        SS >> emailAddress;
+        5:   70-block  0
+        5:   71:        SS >> string_Age;
+        5:   71-block  0
+        5:   72:        SS >> string_firstClass;
+        5:   72-block  0
+        5:   73:        SS >> string_secondClass;
+        5:   73-block  0
+        5:   74:        SS >> string_thirdClass;
+        5:   74-block  0
+        5:   75:        SS >> degree;
+        5:   75-block  0
+        -:   76:
+       10:   77:        stringstream seek(string_Age);
+        5:   77-block  0
+    $$$$$:   77-block  1
+        -:   78:        int Age;
+        5:   79:        seek >> Age;
+        5:   79-block  0
+       10:   80:        stringstream seek1(string_firstClass);
+        5:   80-block  0
+    $$$$$:   80-block  1
+        -:   81:        int firstClass;
+        5:   82:        seek1 >> firstClass;
+        5:   82-block  0
+       10:   83:        stringstream seek2(string_secondClass);
+        5:   83-block  0
+    $$$$$:   83-block  1
+        -:   84:        int secondClass;
+        5:   85:        seek2 >> secondClass;
+        5:   85-block  0
+       10:   86:        stringstream seek3(string_thirdClass);
+        5:   86-block  0
+        5:   86-block  1
+    $$$$$:   86-block  2
+        -:   87:        int thirdClass;
+        5:   88:        seek3 >> thirdClass;
+        5:   88-block  0
+        -:   89:
+        5:   90:        int daysLeft[3] = {firstClass, secondClass, thirdClass};
+        -:   91:        //////////////////////////////////////////////DATA PARSING SECTION END/////////////////////////////////////////////////////
+        -:   92:
+        -:   93:        ///////////////////////////////////////////////SETTER/MUTATOR SECTION//////////////////////////////////////////////////////
+        5:   94:        myStudent.setStudentID(studentID);
+        5:   94-block  0
+        5:   94-block  1
+        5:   94-block  2
+    $$$$$:   94-block  3
+    $$$$$:   94-block  4
+        5:   95:        myStudent.setFirstName(firstName);
+        5:   95-block  0
+        5:   95-block  1
+    $$$$$:   95-block  2
+    $$$$$:   95-block  3
+        5:   96:        myStudent.setlastName(lastName);
+        5:   96-block  0
+        5:   96-block  1
+    $$$$$:   96-block  2
+    $$$$$:   96-block  3
+        5:   97:        myStudent.setEmailAddress(emailAddress);
+        5:   97-block  0
+        5:   97-block  1
+    $$$$$:   97-block  2
+    $$$$$:   97-block  3
+        5:   98:        myStudent.setAge(Age);
+        5:   99:        myStudent.setDaysLeft_in_CourseCompletion(daysLeft);
+        5:   99-block  0
+        5:  100:        if (degree == "SECURITY") {
+        5:  100-block  0
+        2:  101:            myStudent.setDegree(SECURITY);
+        2:  101-block  0
+        3:  102:        } else if (degree == "NETWORK") {
+        3:  102-block  0
+        1:  103:            myStudent.setDegree(NETWORK);
+        1:  103-block  0
+        2:  104:        } else if (degree == "SOFTWARE") {
+        2:  104-block  0
+        2:  105:            myStudent.setDegree(SOFTWARE);
+        2:  105-block  0
+        -:  106:        }
+        -:  107:        ///////////////////////////////////////////GETTER/ACCESSOR SECTION//////////////////////////////////////////////////////////
+        -:  108:
+        -:  109:        ///////////////CREATING OBJECTS AND STORING THEM IN ARRAY SECTION-ALSO SETTING THE RIGHT DEGREE PER STUDENT ////////////////
+        -:  110:
+        -:  111:
+        5:  112:        if (degree == "SECURITY") {
+        5:  112-block  0
+        2:  113:            classRosterArray[r] = student(studentID, firstName, lastName, emailAddress, Age, daysLeft, SECURITY);
+        2:  113-block  0
+        2:  113-block  1
+        2:  113-block  2
+        2:  113-block  3
+        2:  113-block  4
+        2:  113-block  5
+    $$$$$:  113-block  6
+    $$$$$:  113-block  7
+    $$$$$:  113-block  8
+    $$$$$:  113-block  9
+    $$$$$:  113-block 10
+    $$$$$:  113-block 11
+    $$$$$:  113-block 12
+    $$$$$:  113-block 13
+        3:  114:        } else if (degree == "NETWORK") {
+        3:  114-block  0
+        1:  115:            classRosterArray[r] = student(studentID, firstName, lastName, emailAddress, Age, daysLeft,  NETWORK);
+        1:  115-block  0
+        1:  115-block  1
+        1:  115-block  2
+        1:  115-block  3
+        1:  115-block  4
+        1:  115-block  5
+    $$$$$:  115-block  6
+    $$$$$:  115-block  7
+    $$$$$:  115-block  8
+    $$$$$:  115-block  9
+    $$$$$:  115-block 10
+    $$$$$:  115-block 11
+    $$$$$:  115-block 12
+    $$$$$:  115-block 13
+        2:  116:        } else if (degree == "SOFTWARE") {
+        2:  116-block  0
+        2:  117:            classRosterArray[r] = student(studentID, firstName, lastName, emailAddress, Age, daysLeft,  SOFTWARE);
+        2:  117-block  0
+        2:  117-block  1
+        2:  117-block  2
+        2:  117-block  3
+        2:  117-block  4
+        2:  117-block  5
+    $$$$$:  117-block  6
+    $$$$$:  117-block  7
+    $$$$$:  117-block  8
+    $$$$$:  117-block  9
+    $$$$$:  117-block 10
+    $$$$$:  117-block 11
+    $$$$$:  117-block 12
+    $$$$$:  117-block 13
+        -:  118:        }
+        -:  119:
+        -:  120:    }
+        -:  121:        /////////////////////////////////////////////////TESTING IN THIS SECTION/////////////////////////////////////////////////////
+        -:  122:
+        2:  123:    return 0;
+        1:  123-block  0
+        1:  123-block  1
+        -:  124:}
+        -:  125:///////////////////////COURSE FUNCTIONS BELOW: //////////////////////////////////////
+    #####:  126:void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreePrograms )
+        -:  127:{
+    #####:  128:};
+        -:  129:
+        -:  130:
+        -:  131:
+        -:  132:
+        -:  133:
+        -:  134:
+        -:  135:
+        2:  136:void  roster::printAll()
+        -:  137:{
+        2:  138:    cout<<"<-----------------------------------------------------------PRINT ALL STUDENTS------------------------------------------------------------->"<<endl;
+        2:  138-block  0
+       12:  139:    for (int r = 0; r < 5; ++r)
+       12:  139-block  0
+       10:  139-block  1
+        -:  140:    {
+       10:  141:        cout << endl;
+       10:  141-block  0
+       10:  142:        cout << classRosterArray[r].getStudentID()   << left << setw(10) << "\t "<< "\t "<< "\t ";
+       10:  142-block  0
+       10:  142-block  1
+       10:  142-block  2
+       10:  142-block  3
+       10:  142-block  4
+       10:  142-block  5
+    $$$$$:  142-block  6
+    $$$$$:  142-block  7
+       10:  143:        cout << classRosterArray[r].getFirstName()   << right << setw(10) << "\t "<< "\t ";
+       10:  143-block  0
+       10:  143-block  1
+       10:  143-block  2
+       10:  143-block  3
+       10:  143-block  4
+    $$$$$:  143-block  5
+    $$$$$:  143-block  6
+       10:  144:        cout << classRosterArray[r].getlastName()  << left << setw(10) << "\t "<< "\t ";
+       10:  144-block  0
+       10:  144-block  1
+       10:  144-block  2
+       10:  144-block  3
+       10:  144-block  4
+    $$$$$:  144-block  5
+    $$$$$:  144-block  6
+       10:  145:        cout << classRosterArray[r].getAge()<< right << setw(10) <<"\t "<<"\t ";
+       10:  146:        cout << classRosterArray[r].getDaysLeft_in_CourseCompletion() << left << setw(10) << "\t ";
+       10:  147:        cout << classRosterArray[r].getEmailAddress() << right << setw(10) << "\t ";
+       10:  147-block  0
+       10:  147-block  1
+       10:  147-block  2
+       10:  147-block  3
+    $$$$$:  147-block  4
+       10:  148:        if(classRosterArray[r].getDegreeProgram() == 0){}
+        -:  149:
+        -:  150:    }
+        2:  151:    cout<<endl;
+        2:  151-block  0
+        2:  152:    cout<<"<------------------------------------------------------------------------------------------------------------------------------------------>"<<endl;
+        -:  153:
+        2:  154:};
+        -:  155://///////////////////////////////////////////////////////////////////////////////////
+        -:  156:
+        -:  157://////////////////////////////////////////////////////////////////////////////////////
+        -:  158:
+        -:  159:
+        1:  160:void  roster::printByDegreeProgram(DegreePrograms SOFTWARE)
+        -:  161:{
+        1:  162:    DegreePrograms  DegType = SOFTWARE;
+        1:  163:    cout<<"<------------------------------PRINT BY PROGRAM OUTPUT------------------------------------------>"<<endl;
+        1:  163-block  0
+        -:  164:
+        6:  165:    for (int r = 0; r < 5; ++r)
+        6:  165-block  0
+        5:  165-block  1
+        -:  166:    {
+        5:  167:        if(classRosterArray[r].degreeType == DegType)
+        5:  167-block  0
+        -:  168:        {
+        2:  169:            cout <<endl;
+        2:  169-block  0
+        2:  170:            cout << classRosterArray[r].getStudentID() << "\t "<< "\t ";
+        2:  170-block  0
+        2:  170-block  1
+        2:  170-block  2
+    $$$$$:  170-block  3
+    $$$$$:  170-block  4
+        2:  171:            cout << classRosterArray[r].getFirstName() << "\t " << "\t ";
+        2:  171-block  0
+        2:  171-block  1
+        2:  171-block  2
+    $$$$$:  171-block  3
+    $$$$$:  171-block  4
+        2:  172:            cout << classRosterArray[r].getlastName() << "\t " << "\t ";
+        2:  172-block  0
+        2:  172-block  1
+        2:  172-block  2
+    $$$$$:  172-block  3
+    $$$$$:  172-block  4
+        2:  173:            cout << classRosterArray[r].getAge() << "\t ";
+        2:  174:            cout << classRosterArray[r].getEmailAddress() << "\t ";
+        2:  174-block  0
+        2:  174-block  1
+    $$$$$:  174-block  2
+        -:  175:
+        2:  176:            cout << classRosterArray[r].getDaysLeft_in_CourseCompletion() << "\t ";
+        2:  177:            if(classRosterArray[r].getDegreeProgram() == 0){}
+        -:  178:
+        -:  179:        }
+        -:  180:
+        -:  181:    }
+        1:  182:    cout<<endl;
+        1:  182-block  0
+        1:  183:    cout<<"<----------------------------------------------------------------------------------------------->"<<endl;
+        -:  184:
+        1:  185:};
+        -:  186://///////////////////////////////////////////////////////////////////////////////////
+        -:  187:
+        1:  188:void  roster::printAverageDaysInCourse(string studentID)
+        -:  189:{
+        1:  190:    cout<<"<------------------------------PRINT BY AVERAGE DAYS IN COURSES--------------------------------->"<<endl;
+        1:  190-block  0
+        1:  190-block  1
+        2:  191:    string thisID = studentID;
+        1:  191-block  0
+        1:  191-block  1
+    $$$$$:  191-block  2
+        -:  192:
+        6:  193:    for (int r = 0; r < 5; ++r)
+        1:  193-block  0
+        6:  193-block  1
+        5:  193-block  2
+        -:  194:    {
+        -:  195:        // cout <<  classRosterArray[r].studentID<<endl;
+        5:  196:        if(thisID == classRosterArray[r].studentID )
+        5:  196-block  0
+        -:  197:        {
+        1:  198:            int sum= classRosterArray[r].daysLeft_in_CourseCompletion[0] + classRosterArray[r].daysLeft_in_CourseCompletion[1] + classRosterArray[r].daysLeft_in_CourseCompletion[2];
+        1:  199:            int Average = sum/3;
+        1:  200:            cout <<"Data for student with student  ID : "<<thisID<<endl;
+        1:  200-block  0
+        1:  200-block  1
+        1:  200-block  2
+        1:  201:            cout<<"Average time spent per course: "<<Average<<endl;
+        1:  201-block  0
+        1:  201-block  1
+        1:  201-block  2
+        -:  202:
+        -:  203:        }
+        -:  204:
+        -:  205:    }
+        -:  206:
+        1:  207:    cout<<endl;
+        1:  207-block  0
+        1:  208:    cout<<"<----------------------------------------------------------------------------------------------->"<<endl;
+        1:  208-block  0
+        1:  208-block  1
+        -:  209:
+        1:  210:};
+        -:  211://///////////////////////////////////////////////////////////////////////////////////
+        -:  212:
+        1:  213:void   roster::printInvalidEmails()
+        -:  214:{
+        1:  215:    cout<<"<------------------------------PRINT BY INVALID EMAIL ADDRESSES--------------------------------->"<<endl;
+        1:  215-block  0
+        -:  216:
+        6:  217:    for (int r = 0; r < 5; ++r)
+        6:  217-block  0
+        -:  218:    {
+       10:  219:        string goodEmailsAddresses = classRosterArray[r].getEmailAddress();
+        5:  219-block  0
+        5:  219-block  1
+    $$$$$:  219-block  2
+        5:  220:        if((goodEmailsAddresses.find('@') == std::string::npos ) || (goodEmailsAddresses.find('.') == std::string::npos) ||(goodEmailsAddresses.find(' ') != std::string::npos))
+        5:  220-block  0
+        4:  220-block  1
+        3:  220-block  2
+        3:  220-block  3
+        2:  220-block  4
+        5:  220-block  5
+        -:  221:        {
+        3:  222:            cout <<"The following email address is invalid : " << classRosterArray[r].getEmailAddress()<<"   "<<goodEmailsAddresses<<endl;
+        3:  222-block  0
+        3:  222-block  1
+        3:  222-block  2
+        3:  222-block  3
+        3:  222-block  4
+        3:  222-block  5
+        3:  222-block  6
+    $$$$$:  222-block  7
+    $$$$$:  222-block  8
+        -:  223:
+        -:  224:        }
+        -:  225:    }
+        1:  226:    cout<<endl;
+        1:  226-block  0
+        1:  227:    cout<<"<----------------------------------------------------------------------------------------------->"<<endl;
+        -:  228:
+        1:  229:};
+        -:  230:
+        -:  231://///////////////////////////////////////////////////////////////////////////////////
+        -:  232:
+        2:  233:void  roster::remove(string studentID)
+        -:  234:{
+        2:  235:    cout<<"<------------------------------PRINT AFTER STUDENT ID HAS BEEEN REMOVED ------------------------->"<<endl;
+        2:  235-block  0
+        2:  235-block  1
+        4:  236:    string thisID = this->studentID;
+        2:  236-block  0
+    $$$$$:  236-block  1
+        -:  237:    DegreePrograms none;
+        2:  238:    DegreePrograms  degreeType = none;
+        2:  239:    int tempValue[3]={0,0,0};
+        4:  240:    string tempVal="";
+        2:  240-block  0
+        2:  240-block  1
+    $$$$$:  240-block  2
+    $$$$$:  240-block  3
+        -:  241:
+        -:  242:
+       12:  243:    for (int r = 0; r < 5; ++r)
+       12:  243-block  0
+       10:  243-block  1
+        -:  244:    {
+        -:  245:        // cout <<  classRosterArray[r].studentID<<endl;
+       10:  246:        if(studentID == classRosterArray[r].getStudentID() )
+       10:  246-block  0
+       10:  246-block  1
+        -:  247:        {
+        -:  248:
+        1:  249:            cout <<"Data for student with student  ID : "<<thisID<<endl;
+        1:  249-block  0
+        1:  249-block  1
+        1:  249-block  2
+        1:  250:            cout<<"STUDENT "<<studentID<<" was just removed"<<endl;
+        1:  250-block  0
+        1:  250-block  1
+        1:  250-block  2
+        1:  250-block  3
+        -:  251:
+        1:  252:            classRosterArray[r].setStudentID(" ") ;
+        1:  252-block  0
+        1:  252-block  1
+        1:  252-block  2
+    $$$$$:  252-block  3
+    $$$$$:  252-block  4
+    $$$$$:  252-block  5
+    $$$$$:  252-block  6
+        1:  253:            classRosterArray[r].setFirstName(" ") ;
+        1:  253-block  0
+        1:  253-block  1
+    $$$$$:  253-block  2
+    $$$$$:  253-block  3
+    $$$$$:  253-block  4
+    $$$$$:  253-block  5
+        1:  254:            classRosterArray[r].setlastName(" ") ;
+        1:  254-block  0
+        1:  254-block  1
+    $$$$$:  254-block  2
+    $$$$$:  254-block  3
+    $$$$$:  254-block  4
+    $$$$$:  254-block  5
+        1:  255:            classRosterArray[r].setAge(0) ;
+        1:  256:            classRosterArray[r].setEmailAddress(" ") ;
+        1:  256-block  0
+        1:  256-block  1
+        1:  256-block  2
+    $$$$$:  256-block  3
+    $$$$$:  256-block  4
+    $$$$$:  256-block  5
+    $$$$$:  256-block  6
+        1:  257:            classRosterArray[r].setDaysLeft_in_CourseCompletion(tempValue) ;
+        1:  258:            classRosterArray[r].setDegree(none);
+        1:  258-block  0
+        -:  259:
+        -:  260:        }
+        -:  261:
+       10:  262:        if(classRosterArray[r].getStudentID() ==" " )
+       10:  262-block  0
+       10:  262-block  1
+        -:  263:        {
+        2:  264:            cout<<"STUDENT WITH ID " <<studentID<<" HAS BEEN REMOVED";
+        2:  264-block  0
+        2:  264-block  1
+        2:  264-block  2
+        -:  265:
+        -:  266:        }
+        -:  267:
+        -:  268:
+        -:  269:    }
+        2:  270:    cout<<endl;
+        2:  270-block  0
+        2:  271:    cout<<"<----------------------------------------------------------------------------------------------->"<<endl;
+        2:  271-block  0
+        2:  271-block  1
+        -:  272:
+        2:  273:}
+        -:  274:
+        6:  275:roster::~roster() {
+        1:  275-block  0
+        1:  275-block  1
+        6:  275-block  2
+        5:  275-block  3
+        1:  275-block  4
+        -:  276:
+        1:  277:};
+        -:  278:

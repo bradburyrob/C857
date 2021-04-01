@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/Downloads/WGU 867/WGU 867/degree.h
+string
+-
+
+E:/Downloads/WGU 867/WGU 867/roster.cpp
+iostream
+-
+roster.h
+E:/Downloads/WGU 867/WGU 867/roster.h
+string
+-
+student.h
+E:/Downloads/WGU 867/WGU 867/student.h
+degree.h
+E:/Downloads/WGU 867/WGU 867/degree.h
+
+E:/Downloads/WGU 867/WGU 867/roster.h
+iostream
+-
+string
+-
+student.h
+E:/Downloads/WGU 867/WGU 867/student.h
+degree.h
+E:/Downloads/WGU 867/WGU 867/degree.h
+
+E:/Downloads/WGU 867/WGU 867/student.h
+string
+-
+degree.h
+E:/Downloads/WGU 867/WGU 867/degree.h
+string
+-
+ios
+-
+iomanip
+-
+degree.h
+E:/Downloads/WGU 867/WGU 867/degree.h
+

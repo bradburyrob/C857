@@ -1,0 +1,49 @@
+        -:    0:Source:/home/rob/CLionProjects/StudentRoster/main.cpp
+        -:    0:Graph:/home/rob/CLionProjects/StudentRoster/cmake-build-debug-coverage/CMakeFiles/StudentRoster.dir/main.cpp.gcno
+        -:    0:Data:/home/rob/CLionProjects/StudentRoster/cmake-build-debug-coverage/CMakeFiles/StudentRoster.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "roster.h"
+        -:    3:#include "degree.h"
+        -:    4:using namespace std;
+        -:    5:using std::setw;
+        -:    6:
+        1:    7:int main()
+        -:    8:{
+        1:    9:    roster classRoster;
+        1:    9-block  0
+    $$$$$:    9-block  1
+        1:   10:    classRoster.greatStudents();
+        1:   10-block  0
+        1:   10-block  1
+        1:   11:    classRoster.printAll();
+        1:   12:    classRoster.printInvalidEmails();
+        1:   12-block  0
+        1:   13:    classRoster.printAverageDaysInCourse("A3");
+        1:   13-block  0
+        1:   13-block  1
+        1:   13-block  2
+    $$$$$:   13-block  3
+    $$$$$:   13-block  4
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+        1:   14:    classRoster.printByDegreeProgram(SOFTWARE);
+        1:   15:    classRoster.remove("A5");
+        1:   15-block  0
+        1:   15-block  1
+        1:   15-block  2
+    $$$$$:   15-block  3
+    $$$$$:   15-block  4
+    $$$$$:   15-block  5
+    $$$$$:   15-block  6
+        1:   16:    classRoster.printAll();
+        1:   17:    classRoster.remove("A5");
+        1:   17-block  0
+        1:   17-block  1
+        1:   17-block  2
+    $$$$$:   17-block  3
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+    $$$$$:   17-block  6
+        1:   18:}
+        1:   18-block  0

@@ -1,0 +1,172 @@
+        -:    0:Source:/home/rob/CLionProjects/StudentRoster/student.cpp
+        -:    0:Graph:/home/rob/CLionProjects/StudentRoster/cmake-build-debug-coverage/CMakeFiles/StudentRoster.dir/student.cpp.gcno
+        -:    0:Data:/home/rob/CLionProjects/StudentRoster/cmake-build-debug-coverage/CMakeFiles/StudentRoster.dir/student.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <iostream>
+        -:    3:#include <string>
+        -:    4:#include "student.h"
+        -:    5:#include "degree.h"
+        -:    6:using namespace std;
+        -:    7:
+        -:    8:
+        6:    9:student::student(){};
+        6:    9-block  0
+        5:   10:student::student(string studentID,string firstName,string lastName,string emailAddress,int age,int daysLeft_in_CourseCompletion[0], DegreePrograms degreeType)
+        5:   10-block  0
+    $$$$$:   10-block  1
+    $$$$$:   10-block  2
+    $$$$$:   10-block  3
+    $$$$$:   10-block  4
+    $$$$$:   10-block  5
+    $$$$$:   10-block  6
+        -:   11:{
+       20:   12:    for (int e=0;e<3;e++) this->daysLeft_in_CourseCompletion[e] = daysLeft_in_CourseCompletion[e];
+       20:   12-block  0
+       15:   12-block  1
+        5:   13:    this->firstName=firstName;
+        5:   13-block  0
+        5:   14:    this->lastName=lastName;
+        5:   14-block  0
+        5:   15:    this->studentID=studentID;
+        5:   15-block  0
+        5:   16:    this->emailAddress=emailAddress;
+        5:   16-block  0
+        5:   17:    this->age=age;
+        5:   18:    this->degreeType=degreeType;
+        -:   19:
+        -:   20:
+        -:   21:     /*   cout << "From student constructor " << "Student ID: " << studentID << " | First name: " << firstName
+        -:   22:             << " | Last Name: " << lastName << " | Email Address :" << emailAddress << " | age: " << age
+        -:   23:             << " | Classes left: " << daysLeft_in_CourseCompletion[0] << "," << daysLeft_in_CourseCompletion[1] << "," << daysLeft_in_CourseCompletion[2] << " " << degreeType << endl;*/
+        5:   24:    };
+        5:   24-block  0
+        -:   25://<--------------------------------SETTERS/MUTATORS---------------------------------------------------------->>
+        6:   26:void student::setStudentID(string a)
+        -:   27:{
+        6:   28:    studentID = a;
+        6:   28-block  0
+        6:   29:}
+        -:   30://<-------------------------------------->>for(int t=0;t<3;){int daysLeft_in_CourseCompletion[t]}
+        6:   31:void student::setFirstName(string b)
+        -:   32:{
+        6:   33:    firstName = b;
+        6:   33-block  0
+        6:   34:}
+        -:   35://<-------------------------------------->>
+        6:   36:void student::setlastName(string c)
+        -:   37:{
+        6:   38:    lastName = c;
+        6:   38-block  0
+        6:   39:}
+        -:   40://<-------------------------------------->>
+        6:   41:void student::setEmailAddress(string d)
+        -:   42:{
+        6:   43:    emailAddress = d;
+        6:   43-block  0
+        6:   44:}
+        -:   45://<-------------------------------------->>
+        6:   46:void student::setAge(int e)
+        -:   47:{
+        6:   48:    age = e;
+        6:   49:}
+        -:   50://<-------------------------------------->>
+        6:   51:void student::setDaysLeft_in_CourseCompletion(int* daysLeft_in_CourseCompletion){
+       24:   52:    for( int x=0;x<3;x++)
+        6:   52-block  0
+       24:   52-block  1
+        -:   53:    {
+       18:   54:        this->daysLeft_in_CourseCompletion[x] =daysLeft_in_CourseCompletion[x];
+       18:   54-block  0
+        -:   55:    }
+        6:   56:}
+        -:   57://<-------------------------------------->>
+        6:   58:void student::setDegree(DegreePrograms   dt)
+        -:   59:{
+        6:   60:    degreeType=dt;
+        6:   61:}
+        -:   62://<-------------------------------------->>
+        -:   63:
+        -:   64://<----------------------------GETTERS/ACCESSORS-------------------------------------------------------------->>
+       32:   65:string student::getStudentID()
+        -:   66:{
+        -:   67:  //  cout <<studentID<<'\t'<<'\t'<<'\t';
+       32:   68:    return studentID;
+       32:   68-block  0
+        -:   69:}
+        -:   70://<-------------------------------------->>
+       12:   71:string student::getFirstName()
+        -:   72:{
+        -:   73:  //  cout<<firstName<<'\t'<<'\t'<<'\t';
+       12:   74:    return firstName;
+       12:   74-block  0
+        -:   75:}
+        -:   76://<-------------------------------------->>
+       12:   77:string student::getlastName()
+        -:   78:{
+        -:   79:  //  cout<<lastName<<'\t'<<'\t'<<'\t';
+       12:   80:    return lastName;
+       12:   80-block  0
+        -:   81:}
+        -:   82://<-------------------------------------->>
+       20:   83:string student::getEmailAddress()
+        -:   84:{
+        -:   85:  //  cout <<emailAddress<<'\t'<<'\t'<<'\t';
+       20:   86:    return emailAddress;
+       20:   86-block  0
+        -:   87:}
+        -:   88://<-------------------------------------->>
+       12:   89:int student::getAge(){
+        -:   90:  //  cout << age<<'\t'<<'\t'<<'\t';
+       12:   91:    return age;
+       12:   91-block  0
+        -:   92:}
+        -:   93://<-------------------------------------->>
+       12:   94:int  student::getDaysLeft_in_CourseCompletion(){
+       12:   95:        daysLeft_in_CourseCompletion[2] = daysLeft_in_CourseCompletion[2];
+       12:   96:        cout <<daysLeft_in_CourseCompletion[0]<<","<<daysLeft_in_CourseCompletion[1]<<","<<daysLeft_in_CourseCompletion[2]/10;
+       12:   96-block  0
+       12:   97:           return 0;
+        -:   98:}
+        -:   99://<-------------------------------------->>
+       12:  100:DegreePrograms student::getDegreeProgram()
+        -:  101:{
+        -:  102:
+       12:  103:    if(degreeType == SECURITY)
+       12:  103-block  0
+        -:  104:    {
+        4:  105:        degreePicked = "SECURITY";
+        4:  105-block  0
+        -:  106:
+        4:  107:        cout<<"SECURITY";
+        4:  108:        return this->degreeType;
+        -:  109:    }
+        8:  110:    else if(degreeType == NETWORK)
+        8:  110-block  0
+        -:  111:    {
+        2:  112:        degreePicked = "NETWORK";
+        2:  112-block  0
+        2:  113:        cout<<"NETWORK";
+        2:  114:        return this->degreeType;
+        -:  115:    }
+        6:  116:    else if(degreeType == SOFTWARE)
+        6:  116-block  0
+        -:  117:    {
+        5:  118:        degreePicked = "SOFTWARE";
+        5:  118-block  0
+        5:  119:       cout<<"SOFTWARE";
+        5:  120:        return this->degreeType;
+        -:  121:
+        -:  122:    }
+        -:  123:
+        1:  124:}
+        1:  124-block  0
+        -:  125://<-------------------------------------->>
+        -:  126://<-------------------------------------->>
+        1:  127:student::student(student *pStudent) {
+        1:  127-block  0
+        1:  128:};
+        -:  129://<------------------------------------------------------------------------------------------>>
+        -:  130:
+        -:  131:
+        -:  132:
